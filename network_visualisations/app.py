@@ -9,7 +9,7 @@ st.set_page_config(layout="wide")
 st.title("Elektronikus Közbeszerzési Rendszer (EKR) hálózati vizualizáció")
 
 # File selector
-csv_folder = r"C:\Users\makos2tamas911\Documents\dev\mm\k_monitor_visu\data_exports" 
+csv_folder = r"data_exports" 
 csv_files = [f for f in os.listdir(csv_folder) if f.endswith('.csv')]
 selected_file = st.selectbox("Select a CSV file", csv_files)
 
