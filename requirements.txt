@@ -1,0 +1,8 @@
+pandas
+numpy
+scikit-learn
+networkx
+matplotlib
+plotly
+nbformat==4.2.0
+streamlit

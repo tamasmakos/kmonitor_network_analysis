@@ -1,0 +1,64 @@
+__________________________________________
+1. szint - Subnetwork
+
+Assortativity_Coefficient
+Jelentése: A csomópontok azon tendenciáját méri, hogy hasonló tulajdonságokkal rendelkező csomópontokhoz kapcsolódnak.
+Értelmezés: Egy kétrészes beszerzési hálózatban a magas asszortativitási együttható (közel +1) arra utal, hogy a hasonló helyről származó vevők és nyertesek gyakrabban kapcsolódnak egymáshoz. Az alacsony asszortativitási együttható (közel -1) azt jelzi, hogy a vevők hajlamosak a szerződéseket különböző helyről származó nyerteseknek odaítélni. A 0 körüli együttható azt jelenti, hogy a kapcsolatokban nincs erős földrajzi torzítás.
+--
+Density
+Jelentése: A hálózatban a potenciális kapcsolatoknak a tényleges kapcsolatok arányát méri.
+Értelmezés: Egy kétrészes beszerzési hálózatban a nagy sűrűség azt jelenti, hogy sok lehetséges vevő-nyertes kapcsolat valósul meg, ami egy erősen összekapcsolt piacra utal. Az alacsony sűrűség a lehetségesnél kevesebb kapcsolatot jelez, ami egy szegmentáltabb vagy ritkább piacra utal.
+
+__________________________________________
+2. szint - Subgraph
+
+Largest_Clique_Size
+Jelentése: A kétrészes hálózatokban általában a legnagyobb teljes kétrészes részgráfra utal (a vevők és a nyertesek halmaza, ahol minden egyes vevő kapcsolatban áll a halmaz összes nyertesével és fordítva).
+Értelmezés: A nagy klikkméret a vevők és nyertesek szorosan összetartozó csoportjára utalhat, ami esetleg összejátszásra utalhat. A kis méret szétszórtabb kapcsolatokra utalhat.
+
+--
+K_Core_Number
+Jelentése: A k legnagyobb értéke, amelyhez k-mag létezik a hálózatban. A k-mag egy olyan maximális részgráf, amelyben minden csomópontnak legalább k kapcsolata van a részgráfon belül.
+Értelmezés: A magas k-magszám a vevők és nyertesek erősen összekapcsolt csoportjait jelezheti, ami esetleg piaci dominanciát vagy összejátszást jelenthet. Alacsonyabb értékek kevésbé szorosan összekapcsolt csoportokra utalnak.
+
+--
+Average_Path_Length
+Jelentése: A hálózati csomópontok összes lehetséges párja esetében a legrövidebb utak mentén megtett lépések átlagos száma.
+Értelmezés: Egy kétrészes beszerzési hálózatban a hosszabb átlagos útvonalhossz arra utal, hogy a piac szegmentáltabb, a vevők és a nyertesek kevésbé vannak közvetlen kapcsolatban egymással. A rövidebb útvonalhossz integráltabb piacra utal.
+
+--
+Diameter
+Jelentése: A hálózat legrövidebb útvonalai közül a leghosszabb.
+Értelmezés: A nagyobb átmérő egy beszerzési hálózatban a legtávolabbi vevők és nyertesek közötti nagyobb távolságot (a kapcsolatok tekintetében) jelzi, ami szétszórtabb piaci struktúrára utal.
+
+--
+Disparity_Measure
+Jelentése: A csomópontok közötti kapcsolatok egyenlőtlenségét számszerűsíti.
+Értelmezés: A magasabb egyenlőtlenségi mérték a csomópontok közötti kapcsolatok egyenlőtlenebb eloszlását jelzi, ami potenciálisan bizonyos vevők vagy nyertesek dominanciáját jelzi. Az alacsonyabb értékek a kapcsolatok igazságosabb eloszlására utalnak.
+
+--
+Density
+Értelmezés: Hasonló az alhálózati szinthez, de az egyes részgráfok esetében. Megmutatja, hogy a vevők és nyertesek meghatározott alcsoportjai mennyire vannak összekapcsolódva.
+szint - csomópont
+
+__________________________________________
+3. szint - Node
+--
+Degree_Centrality
+Jelentése: A csomópontok azon része, amelyekkel egy adott csomópont kapcsolatban áll.
+Értelmezés: Egy kétrészes beszerzési hálózatban egy győztes magas fokú centralitása egy rendkívül aktív vagy domináns szereplőt jelezhet. Egy vevő esetében ez arra utalhat, hogy több nyertessel való széleskörű elkötelezettséget mutat.
+
+--
+Betweenness_Centrality
+Jelentése: Azt méri, hogy egy csomópont milyen mértékben fekszik más csomópontok közötti útvonalakon.
+Értelmezés: A magas betweenness centralitás olyan csomópontra (vevő vagy nyertes) utalhat, amely kulcsszerepet játszik a beszerzések áramlásában, és potenciálisan kapuőrként vagy hídként működik a piacon.
+
+--
+Closeness_Centrality
+Jelentése: A csomópont és az összes többi csomópont közötti legrövidebb út átlagos hossza.
+Értelmezés: A magas közelség-centralitással rendelkező csomópontok gyorsan tudnak interakcióba lépni a hálózat többi tagjával, ami a beszerzési folyamat befolyásos szereplőire utal.
+
+--
+Eigenvector_Centrality
+Jelentése: Egy csomópont befolyását a kapcsolatainak száma és minősége alapján méri.
+Értelmezés: A magas sajátvektor-centralitás azt jelzi, hogy egy csomópont sok olyan csomóponttal áll kapcsolatban, amelyek maguk is magas pontszámmal rendelkeznek. Nemcsak a közvetlen kapcsolatok, hanem a hálózatban betöltött szélesebb körű hatásuk révén is befolyásos csomópontokra utal.
